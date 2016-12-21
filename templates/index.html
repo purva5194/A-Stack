@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app="loginapp">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+    <link rel='stylesheet prefetch'
+          href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+
+    <link rel="stylesheet" href="../static/css/style.css">
+
+
+</head>
+
+<body ng-controller="LoginController">
+
+<!-- Mixins-->
+<!-- Pen Title-->
+<div class="pen-title">
+    <h1>Login Form</h1><br/>
+    <div class="container">
+        <div class="card"></div>
+        <div class="card">
+            <h1 class="title">Login</h1>
+            <form>
+                <div class="input-container">
+                    <input type="text" ng-model="login_username" required="required"/>
+                    <label>Username</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                    <input type="password" ng-model="login_password" required="required"/>
+                    <label>Password</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="footer" style="color:#c9302c ; font-size: medium">{{ '{{flag}}' }}</div>
+                <br>
+                <div class="button-container">
+                    <button ng-click="checkUser(login_username, login_password)"><span>Go</span></button>
+                </div>
+                <div class="footer"><a href="#">Forgot your password?</a></div>
+            </form>
+        </div>
+        <div class="card alt">
+            <div class="toggle"></div>
+            <h1 class="title">Register
+                <div class="close"></div>
+            </h1>
+            <form>
+                <div class="input-container">
+                    <input type="text" ng-model="domain" required="required"/>
+                    <label>Domain</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                    <input type="text" ng-model="username1" required="required"/>
+                    <label>Username</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="input-container">
+                    <input type="password" ng-model="password1" required="required"/>
+                    <label>Password</label>
+                    <div class="bar"></div>
+                </div>
+                <div class="button-container">
+                    <button ng-click="addUser(domain, username1, password1)"><span>Sign up</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js" ></script>
+    <script src="../static/js/index.js"></script>
+    <script src="../static/controller/logincontroller.js"></script>
+</div>
+</body>
+</html>
